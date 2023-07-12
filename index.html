@@ -53,11 +53,12 @@
 
     nav ul li a {
       display: block;
-      color: #fff;
+      color: #333;
       text-decoration: none;
       padding: 10px;
       border-radius: 5px;
-      background-color: #eaf0ff;
+      background-color: #fff;
+      border: 1px solid #ccc;
     }
 
     section {
@@ -93,6 +94,14 @@
       background-color: #fff;
       margin-bottom: 6px;
     }
+
+    .contact-button {
+      padding: 10px 20px;
+      background-color: #eaf0ff;
+      color: #333;
+      border: none;
+      border-radius: 5px;
+    }
   </style>
 </head>
 <body>
@@ -111,6 +120,7 @@
       <li><a href="#server">サーバー情報</a></li>
       <li><a href="#community">コミュニティ</a></li>
       <li><a href="#contact">お問い合わせ</a></li>
+      <li><a href="#other-page">他のページへ</a></li>
     </ul>
   </nav>
 
@@ -143,7 +153,7 @@
       <br>
       <textarea placeholder="お問い合わせ内容" required style="margin-bottom: 10px; padding: 5px;"></textarea>
       <br>
-      <button type="submit" style="padding: 10px 20px;">送信</button>
+      <button type="submit" class="contact-button">送信</button>
     </form>
   </section>
 
