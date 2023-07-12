@@ -24,6 +24,23 @@
       font-size: 36px;
     }
 
+    nav {
+      position: fixed;
+      top: 0;
+      left: 0;
+      background-color: #333;
+      color: #fff;
+      width: 200px;
+      height: 100%;
+      padding: 20px;
+      transform: translateX(-220px);
+      transition: transform 0.3s ease-in-out;
+    }
+
+    nav.active {
+      transform: translateX(0);
+    }
+
     nav ul {
       list-style-type: none;
       margin: 0;
@@ -31,7 +48,6 @@
     }
 
     nav ul li {
-      display: block;
       margin-bottom: 10px;
     }
 
@@ -39,13 +55,16 @@
       display: block;
       color: #fff;
       text-decoration: none;
-      padding: 5px;
+      padding: 10px;
+      border-radius: 5px;
+      background-color: #eaf0ff;
     }
 
     section {
       background-color: #fff;
       padding: 20px;
       margin-bottom: 20px;
+      border-radius: 5px;
     }
 
     section h2 {
@@ -59,34 +78,46 @@
       text-align: center;
       font-size: 14px;
     }
+
+    .menu-toggle {
+      position: fixed;
+      top: 20px;
+      left: 20px;
+      cursor: pointer;
+      z-index: 999;
+    }
+
+    .menu-toggle .bar {
+      width: 30px;
+      height: 4px;
+      background-color: #fff;
+      margin-bottom: 6px;
+    }
   </style>
 </head>
 <body>
   <header>
     <h1>くろいぬさば</h1>
-    <nav>
-      <ul>
-        <li><a href="#home">ホーム</a></li>
-        <li><a href="#server">サーバー情報</a></li>
-        <li><a href="#community">コミュニティ</a></li>
-        <li><a href="#contact">お問い合わせ</a></li>
-      </ul>
-    </nav>
+    <div class="menu-toggle">
+      <div class="bar"></div>
+      <div class="bar"></div>
+      <div class="bar"></div>
+    </div>
   </header>
+
+  <nav>
+    <ul>
+      <li><a href="#home">ホーム</a></li>
+      <li><a href="#server">サーバー情報</a></li>
+      <li><a href="#community">コミュニティ</a></li>
+      <li><a href="#contact">お問い合わせ</a></li>
+    </ul>
+  </nav>
 
   <section id="home">
     <h2>ようこそくろいぬさばへ！</h2>
     <p>くろいぬさばは、楽しく友達と一緒に遊べるMinecraftサーバーです。</p>
   </section>
-
-  <aside>
-    <h3>サイドメニュー</h3>
-    <ul>
-      <li><a href="#news">最新情報</a></li>
-      <li><a href="#events">イベント</a></li>
-      <li><a href="#rules">ルール</a></li>
-    </ul>
-  </aside>
 
   <section id="server">
     <h2>サーバー情報</h2>
@@ -119,5 +150,14 @@
   <footer>
     <p>© 2023 くろいぬさば. All rights reserved.</p>
   </footer>
+
+  <script>
+    const menuToggle = document.querySelector('.menu-toggle');
+    const nav = document.querySelector('nav');
+
+    menuToggle.addEventListener('click', () => {
+      nav.classList.toggle('active');
+    });
+  </script>
 </body>
 </html>
