@@ -27,7 +27,7 @@
       color: #fff;
       text-align: center;
       position: relative;
-      z-index: 1;
+      z-index: 2;
     }
 
     h1 {
@@ -52,7 +52,7 @@
       padding: 20px;
       transform: translateX(-100%);
       transition: transform 0.3s ease-in-out;
-      z-index: 2;
+      z-index: 3;
     }
 
     nav.active {
@@ -109,7 +109,7 @@
       top: 20px;
       left: 20px;
       cursor: pointer;
-      z-index: 999;
+      z-index: 4;
     }
 
     .menu-toggle .bar {
@@ -178,11 +178,6 @@
   <div class="container">
     <header>
       <img src="image/logo.PNG" alt="くろいぬさば" class="logo">
-      <div class="menu-toggle">
-        <div class="bar"></div>
-        <div class="bar"></div>
-        <div class="bar"></div>
-      </div>
     </header>
 
     <nav>
@@ -225,7 +220,12 @@
         </form>
       </div>
     </section>
+  </div>
 
+  <div class="menu-toggle">
+    <div class="bar"></div>
+    <div class="bar"></div>
+    <div class="bar"></div>
   </div>
 
   <script>
