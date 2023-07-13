@@ -11,6 +11,7 @@
       padding: 0;
       background-color: #36393f;
       color: #fff;
+      opacity: 0; /* 初期状態は透明にする */
     }
 
     .container {
@@ -120,5 +121,19 @@
 
     <a href="https://kuroinuserver.github.io/Kuroinuserver/" class="top-button">トップページに戻る</a>
   </div>
+
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script>
+    // ページが読み込まれた後にアニメーションを実行する
+    window.addEventListener('load', function() {
+      anime({
+        targets: 'body',
+        opacity: 1,
+        translateY: ['-50%', '0'],
+        easing: 'easeInOutSine',
+        duration: 1000
+      });
+    });
+  </script>
 </body>
 </html>
