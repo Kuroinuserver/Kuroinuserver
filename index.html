@@ -167,6 +167,9 @@
       text-align: center;
     }
   </style>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/animejs/3.2.1/anime.min.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.js"></script>
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/aos@2.3.4/dist/aos.css" />
 </head>
 <body>
   <div class="container">
@@ -189,12 +192,12 @@
       </ul>
     </nav>
 
-    <section id="home">
+    <section id="home" data-aos="fade-up">
       <h2>ようこそくろいぬさばへ！</h2>
       <p>くろいぬさばは、楽しく友達と一緒に遊べるMinecraftサーバーです。</p>
     </section>
 
-    <section id="server">
+    <section id="server" data-aos="fade-up">
       <h2>サーバー情報</h2>
       <p>IPアドレス: kuroinusaba.com</p>
       <p>バージョン: 1.19.3</p>
@@ -202,13 +205,13 @@
       <p>プラグイン: Essentials, WorldGuard, etc.</p>
     </section>
 
-    <section id="community">
+    <section id="community" data-aos="fade-up">
       <h2>コミュニティ</h2>
       <p>くろいぬさばでは、プレイヤー同士の交流を大切にしています。一緒に冒険しましょう！</p>
       <a href="https://kuroinuserver.github.io/Kuroinuserver/discord.html" class="discord-button">Discordサーバーに参加する</a>
     </section>
 
-    <section id="contact">
+    <section id="contact" data-aos="fade-up">
       <h2>お問い合わせ</h2>
       <div class="contact-form">
         <form>
@@ -223,6 +226,12 @@
   </div>
 
   <script>
+    AOS.init({
+      duration: 800, // アニメーションの速さ（ミリ秒）
+      once: true, // アニメーションを1回だけ再生するかどうか
+      mirror: false, // スクロール方向によってアニメーションを反転するかどうか
+    });
+
     const menuToggle = document.querySelector('.menu-toggle');
     const nav = document.querySelector('nav');
 
